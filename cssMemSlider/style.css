@@ -140,4 +140,39 @@
     cursor:auto;
   }
 
+  @media (max-width: 391px) {
+    .wrapper {
+        width: 90%;
+        height:100%;
+    }
+
+    .slider{
+        height:45vh;
+    }
   
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5vh;
+        margin: 0;
+        height: 70%;
+    }
+
+    .description {
+        width: 100%;
+        height:80%;
+        align-self: flex-end;
+    }
+  
+    .controls {
+        width:100%;
+        height: 10%;
+        padding: 0;
+        align-self: flex-start;
+    }
+
+    .meme-img{
+        height:40vh;
+    }
+    
+}
