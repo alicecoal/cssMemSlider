@@ -12,7 +12,7 @@
   }
   
   .wrapper {
-    max-width: 1050px;
+    max-width: 72rem;
     width: 100%;
     height: 75vh;
     margin: 0 auto;
@@ -20,7 +20,7 @@
   
   .slider {
     width: 100%;
-    height: 75vh;
+    height: 70vh;
     overflow: hidden;
     margin-top: 5vh;
   }
@@ -28,7 +28,7 @@
   .slides {
     display: flex;
     width: calc(100% * 4);
-    height: 75vh;
+    height: 70vh;
     margin-left: 0;
     transition: margin-left 0.7s 0.1s;
   }
@@ -42,14 +42,24 @@
   .content {
     display: flex;
     justify-content: space-between;
+    height: 30%;
     align-items: center;
     padding-bottom: 1rem;
     margin-top:1rem;
   }
   
   .description {
-    width: 40%;
+    width: 70%;
     overflow: hidden;
+    height: 30%;
+  }
+
+  .controls {
+    width: 30%;
+    height: inherit;
+    overflow: hidden;
+    padding-left: 15%;
+    height: 30%;
   }
   
   .text {
@@ -65,8 +75,8 @@
     line-height: 2rem;
     text-align: left;
     font-family: "Indie Flower";
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     color:azure
   }
   
@@ -76,41 +86,41 @@
   
   label {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 5vh;
+    height: 5vh;
     border-radius: 50%;
     cursor: pointer;
   }
   
-  .controls__item {
+  .button {
     display: block;
-    width: 15px;
-    height: 15px;
-    margin: 0 10px;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.625rem;
     border-radius: 50%;
     background: none;
-    border: 2px solid white;
+    border: 0.125rem solid white;
     cursor: pointer;
   }
   
-  label:hover .controls__item {
+  label:hover .button {
     background-color: white;
   }
   
   /*animation*/
   
-  #meme1:checked~.content .controls .checked_1 .controls__item,
-  #meme2:checked~.content .controls .checked_2 .controls__item,
-  #meme3:checked~.content .controls .checked_3 .controls__item,
-  #meme4:checked~.content .controls .checked_4 .controls__item {
+  #meme1:checked~.content .controls .item1 .button,
+  #meme2:checked~.content .controls .item2 .button,
+  #meme3:checked~.content .controls .item3 .button,
+  #meme4:checked~.content .controls .item4 .button {
     background-color: white;
   }
   
-  #meme1:checked~.content .controls .checked_1:hover .controls__item,
-  #meme2:checked~.content .controls .checked_2:hover .controls__item,
-  #meme3:checked~.content .controls .checked_3:hover .controls__item,
-  #meme4:checked~.content .controls .checked_4:hover .controls__item {
-    border: 2px solid white;
+  #meme1:checked~.content .controls .item1:hover .button,
+  #meme2:checked~.content .controls .item2:hover .button,
+  #meme3:checked~.content .controls .item3:hover .button,
+  #meme4:checked~.content .controls .item4:hover .button {
+    border: 0.125rem solid white;
   }
   
   #meme1:checked~.slider .slides,
@@ -133,25 +143,3 @@
     margin-left: -300%;
   }
   
-  /*for mobile*/
-  
-  @media (max-width: 800px) {
-    .wrapper {
-      width: 93%;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .description {
-      width: 100%;
-    }
-  
-    .content {
-      flex-wrap: wrap-reverse;
-      align-items: center;
-    }
-  
-    .controls {
-      margin: auto;
-    }
-  }
