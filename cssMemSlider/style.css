@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-attachment: fixed;
+    text-align: center;
+    background-size: cover;
+    background-color: rgb(58, 53, 53);
+  }
+  
+  .wrapper {
+    max-width: 1050px;
+    width: 100%;
+    height: 75vh;
+    margin: 0 auto;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    margin-top: 5vh;
+  }
+  
+  .slides {
+    display: flex;
+    width: calc(100% * 4);
+    height: 75vh;
+    margin-left: 0;
+    transition: margin-left 0.7s 0.1s;
+  }
+  
+  .slides__img {
+    width: calc(100% / 4);
+    object-fit:fill;
+    border-radius: 3%;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-top:1rem;
+  }
+  
+  .description {
+    width: 40%;
+    overflow: hidden;
+  }
+  
+  .text {
+    display: flex;
+    width: calc(100% * 4);
+    margin-left: 0;
+    transition: margin-left 0.7s 0.1s;
+  }
+  
+  .text p {
+    width: calc(100% / 4);
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+    font-family: "Indie Flower";
+    font-size: 20px;
+    font-weight: 500;
+    color:azure
+  }
+  
+  input {
+    display: none;
+  }
+  
+  label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .controls__item {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  
+  label:hover .controls__item {
+    background-color: white;
+  }
+  
+  /*animation*/
+  
+  #meme1:checked~.content .controls .checked_1 .controls__item,
+  #meme2:checked~.content .controls .checked_2 .controls__item,
+  #meme3:checked~.content .controls .checked_3 .controls__item,
+  #meme4:checked~.content .controls .checked_4 .controls__item {
+    background-color: white;
+  }
+  
+  #meme1:checked~.content .controls .checked_1:hover .controls__item,
+  #meme2:checked~.content .controls .checked_2:hover .controls__item,
+  #meme3:checked~.content .controls .checked_3:hover .controls__item,
+  #meme4:checked~.content .controls .checked_4:hover .controls__item {
+    border: 2px solid white;
+  }
+  
+  #meme1:checked~.slider .slides,
+  #meme1:checked~.content .description .text {
+    margin-left: 0;
+  }
+  
+  #meme2:checked~.slider .slides,
+  #meme2:checked~.content .description .text {
+    margin-left: -100%;
+  }
+  
+  #meme3:checked~.slider .slides,
+  #meme3:checked~.content .description .text {
+    margin-left: -200%;
+  }
+  
+  #meme4:checked~.slider .slides,
+  #meme4:checked~.content .description .text {
+    margin-left: -300%;
+  }
+  
+  /*for mobile*/
+  
+  @media (max-width: 800px) {
+    .wrapper {
+      width: 93%;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .description {
+      width: 100%;
+    }
+  
+    .content {
+      flex-wrap: wrap-reverse;
+      align-items: center;
+    }
+  
+    .controls {
+      margin: auto;
+    }
+  }
