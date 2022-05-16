@@ -32,7 +32,7 @@
   }
 
   .content {
-      overflow: hidden;
+    overflow: hidden;
     height: 23%;
     align-items: center;
     padding-bottom: 1rem;
@@ -43,16 +43,15 @@
   
   .description {
     overflow: hidden;
-    width: 70%;
-    height: 90%;
+    width: 80%;
+    height: 20%;
   }
 
   .controls {
     overflow: hidden;
-    width: 30%;
-    padding-left: 15%;
+    width: 15%;
     height: 90%;
-  }
+}
   
   .slides {
     width: 400%;
