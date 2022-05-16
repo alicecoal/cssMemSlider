@@ -140,14 +140,14 @@
     cursor:auto;
   }
 
-  @media (max-width: 391px) {
+  @media (max-width: 320px) {
     .wrapper {
         width: 90%;
         height:100%;
     }
 
     .slider{
-        height:45vh;
+        height:40vh;
     }
   
     .content {
@@ -172,7 +172,7 @@
     }
 
     .meme-img{
-        height:40vh;
+        height:30vh;
     }
     
 }
