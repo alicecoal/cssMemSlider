@@ -9,6 +9,7 @@
     background-size: cover;
     background-color: rgb(58, 53, 53);
     background-attachment: fixed;
+    overflow: hidden;
   }
   
   .wrapper {
