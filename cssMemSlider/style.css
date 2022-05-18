@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    text-align: center;
+    background-size: cover;
+    background-color: rgb(58, 53, 53);
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  
+  .wrapper {
+    width: 100%;
+    height: 70%;
+    max-width: 72vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  input {
+    display: none;
+  }
+  
+  .slider {
+    overflow: hidden;
+    width: 100%;
+    height: 70%;
+    margin-top: 5vh;
+  }
+
+  .content {
+    overflow: hidden;
+    height: 23%;
+    padding-bottom: 1rem;
+    margin-top:1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .description {
+    overflow: hidden;
+    width: 70%;
+    height: 20%;
+  }
+
+  .controls {
+    width: 23%;
+    height: 90%;
+    white-space: nowrap;
+}
+  
+  .slides {
+    width: 400%;
+    height: 35vw;
+    margin-left: 0;
+    display: flex;
+    transition: margin-left 0.5s 0.1s;
+  }
+  
+  .meme-img {
+    width: 25%;
+    object-fit:fill;
+    border-radius: 3%;
+  }
+  
+  .text {
+    display: flex;
+    width: 400%;
+    margin-left: 0;
+    transition: margin-left 0.5s 0.1s;
+  }
+  
+  .text p {
+    width: 25%;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+    font-family: "Indie Flower";
+    font-size: 2vw+2vh;
+    font-weight: 600;
+    color:azure
+  }
+  
+  label {
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 1vw;
+  }
+  
+  .button {
+    display: block;
+    width: 1.2vw;
+    height: 1.2vw;
+    margin: 1% 1%;
+    border-radius: 50%;
+    background: none;
+    border: 0.125rem solid white;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  label:hover .button {
+    background-color: white;
+  }
+
+  label .button:active {
+    background-color: brown;
+  }
+  
+  #meme1:checked~.slider .slides,
+  #meme1:checked~.content .description .text {
+    margin-left: 0;
+  }
+
+  #meme2:checked~.slider .slides,
+  #meme2:checked~.content .description .text {
+    margin-left: -100%;
+  }
+  
+  #meme3:checked~.slider .slides,
+  #meme3:checked~.content .description .text {
+    margin-left: -200%;
+  }
+  
+  #meme4:checked~.slider .slides,
+  #meme4:checked~.content .description .text {
+    margin-left: -300%;
+  }
+  
+  #meme1:checked~.content .controls .item1 .button,
+  #meme2:checked~.content .controls .item2 .button,
+  #meme3:checked~.content .controls .item3 .button,
+  #meme4:checked~.content .controls .item4 .button {
+    background-color: rgb(247, 213, 213);
+  }
+  
+  
+  #meme1:checked~.content .controls .item1:hover .button,
+  #meme2:checked~.content .controls .item2:hover .button,
+  #meme3:checked~.content .controls .item3:hover .button,
+  #meme4:checked~.content .controls .item4:hover .button {
+    cursor:auto;
+  }
+
+  @media (max-width: 320px) {
+    .wrapper {
+        width: 90%;
+        height:100%;
+    }
+
+    .slider{
+        height:40vh;
+    }
+  
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5vh;
+        margin: 0;
+        height: 70%;
+    }
+
+    label {
+        width: 5vh;
+        height: 5vh;
+      }
+
+    .description {
+        width: 100%;
+        height:80%;
+        align-self: flex-end;
+    }
+  
+    .controls {
+        width:100%;
+        height: 10%;
+        padding: 0;
+        align-self: flex-start;
+    }
+
+    .button {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin: 0 1%;
+        border-radius: 50%;
+        background: none;
+        border: 0.125rem solid white;
+        cursor: pointer;
+      }
+
+    .meme-img{
+        height:30vh;
+    }
+    
+}
