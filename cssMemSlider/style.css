@@ -108,6 +108,10 @@
   label:hover .button {
     background-color: white;
   }
+
+  label .button:active {
+    background-color: brown;
+  }
   
   #meme1:checked~.slider .slides,
   #meme1:checked~.content .description .text {
@@ -135,6 +139,7 @@
   #meme4:checked~.content .controls .item4 .button {
     background-color: rgb(247, 213, 213);
   }
+  
   
   #meme1:checked~.content .controls .item1:hover .button,
   #meme2:checked~.content .controls .item2:hover .button,
